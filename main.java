@@ -1,4 +1,4 @@
-import java.util.HashSet;
+import java.util.HashMap;
 
 /**
  * @author  Aaron Yam
@@ -29,7 +29,13 @@ public class main{
      * otherwise false
      */
     public boolean map(Char[] string1, Char[] string2){
-
+        HashMap association = new HashMap(string1.length);
+        int i = 0;
+        for(char a : string1){
+            association.put(a, string2[i]);
+            i = i + 1;
+        }
+        return true;
     }
     
     /**
@@ -59,7 +65,14 @@ public class main{
      * false
      */
     public boolean checkDuplicates(Char[] string1){
-
+        for(char a : string1){
+            for (char b : string1){
+                if(a == b){
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
 
