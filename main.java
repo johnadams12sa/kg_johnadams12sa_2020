@@ -7,12 +7,16 @@ import java.util.HashSet;
 
 public class main{
     public static void main(String[] args){
+
+        boolean result = false;
         
         Char[] inputString1 = args[0].toCharArray();
         Char[] inputString2 = args[0].toCharArray();
-        checkSize(inputString1, inputString2);
-        checkDuplicates(inputString1);
-        boolean result = map(inputString1, inputString2);
+        boolean sizeCheckResult = checkSize(inputString1, inputString2);
+        boolean checkDuplicatesResult = checkDuplicates(inputString1);
+        if(sizeCheckResult && checkDuplicatesResult){
+            result = map(inputString1, inputString2);
+        }
         System.out.println(result);
     }
 
@@ -55,7 +59,7 @@ public class main{
      * false
      */
     public boolean checkDuplicates(Char[] string1){
-        
+
     }
 
 
