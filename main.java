@@ -29,7 +29,7 @@ public class main{
      * otherwise false
      */
     public static boolean map(char[] string1, char[] string2){
-        HashMap association = new HashMap(string1.length);
+        HashMap<Character,Character> association = new HashMap<Character,Character>();
         int i = 0;
         for(char a : string1){
             association.put(a, string2[i]);
