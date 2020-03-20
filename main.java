@@ -66,11 +66,9 @@ public class main{
      * false
      */
     public static boolean checkDuplicates(char[] string1){
-        for(char a : string1){
-            for (char b : string1){
-                if(a == b){
-                    return false;
-                }
+        for(int i = 0; i < string1.length-1; i++){
+            if(string1[i] == string1[i+1]){
+                return false;
             }
         }
         return true;
