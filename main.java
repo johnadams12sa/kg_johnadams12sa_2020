@@ -6,18 +6,19 @@ import java.util.HashMap;
  */
 
 public class main{
-    public static void main(String[] args){
-
-        boolean result = false;
+    public static void main(String[] args){ 
         
+        boolean result = false;
+
         char[] inputString1 = args[0].toCharArray();
         char[] inputString2 = args[1].toCharArray();
         boolean sizeCheckResult = checkSize(inputString1, inputString2);
         boolean checkDuplicatesResult = checkDuplicates(inputString1);
-        if(sizeCheckResult && checkDuplicatesResult){
+        if((sizeCheckResult == true) && (checkDuplicatesResult == true)){
             result = map(inputString1, inputString2);
         }
         System.out.println(result);
+        return;
     }
 
     /**
