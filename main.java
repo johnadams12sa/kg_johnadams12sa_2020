@@ -11,7 +11,7 @@ public class main{
         boolean result = false;
         
         char[] inputString1 = args[0].toCharArray();
-        char[] inputString2 = args[0].toCharArray();
+        char[] inputString2 = args[1].toCharArray();
         boolean sizeCheckResult = checkSize(inputString1, inputString2);
         boolean checkDuplicatesResult = checkDuplicates(inputString1);
         if(sizeCheckResult && checkDuplicatesResult){
